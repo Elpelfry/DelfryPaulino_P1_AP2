@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
+import edu.ucne.delfrypaulino_p1_ap2.presentation.navigation.DelfryPaulino_P1_AP2NavHost
 import edu.ucne.delfrypaulino_p1_ap2.ui.theme.DelfryPaulino_P1_AP2Theme
 
 @AndroidEntryPoint
@@ -29,7 +30,8 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                             .padding(innerPadding)
                     ) {
-
+                        val navHost = rememberNavController()
+                        DelfryPaulino_P1_AP2NavHost(navController = navHost)
                     }
                 }
             }
