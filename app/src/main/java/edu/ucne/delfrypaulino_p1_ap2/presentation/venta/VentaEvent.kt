@@ -9,7 +9,5 @@ sealed interface VentaEvent {
     data class onGalonesChanged(val galones : String) : VentaEvent
     data class onDescuentoGalonChanged(val descuentoGalon : String) : VentaEvent
     data class onPrecioChanged(val precio : String) : VentaEvent
-    data class onTotalDescontadoChanged(val totalDescontado : String) : VentaEvent
-    data class onTotalChanged(val total : String) : VentaEvent
     data class selectVenta(val ventaId: Int) : VentaEvent
 }

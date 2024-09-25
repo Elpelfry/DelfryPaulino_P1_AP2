@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
+import edu.ucne.delfrypaulino_p1_ap2.presentation.venta.VentaListScreen
 
 @Composable
 fun DelfryPaulino_P1_AP2NavHost(
@@ -17,14 +18,14 @@ fun DelfryPaulino_P1_AP2NavHost(
         startDestination = Screen.VentaListScreen,
     ) {
         composable<Screen.VentaListScreen> {
-            Button(
-                onClick = {
+            VentaListScreen(
+                onEdit = {
+                    navController.navigate(Screen.VentaScreen(it))
+                },
+                onAdd = {
                     navController.navigate(Screen.VentaScreen(0))
                 }
-            ) {
-                Text("Registro")
-                }
-
+            )
         }
         composable<Screen.VentaScreen> {
             val args = it.toRoute<Screen.VentaScreen>()
