@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 sealed class Screen {
     @Serializable
-    object ListScreen: Screen()
+    object VentaListScreen: Screen()
     @Serializable
-    data class RegistroScreen(val id: Int): Screen()
+    data class VentaScreen(val id: Int): Screen()
 }

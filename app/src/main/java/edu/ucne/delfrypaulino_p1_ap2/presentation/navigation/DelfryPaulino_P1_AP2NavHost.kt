@@ -14,23 +14,23 @@ fun DelfryPaulino_P1_AP2NavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.ListScreen,
+        startDestination = Screen.VentaListScreen,
     ) {
-        composable<Screen.ListScreen> {
+        composable<Screen.VentaListScreen> {
             Button(
                 onClick = {
-                    navController.navigate(Screen.RegistroScreen(0))
+                    navController.navigate(Screen.VentaScreen(0))
                 }
             ) {
                 Text("Registro")
                 }
 
         }
-        composable<Screen.RegistroScreen> {
-            val args = it.toRoute<Screen.RegistroScreen>()
+        composable<Screen.VentaScreen> {
+            val args = it.toRoute<Screen.VentaScreen>()
             Button(
                 onClick = {
-                    navController.navigate(Screen.ListScreen)
+                    navController.navigate(Screen.VentaListScreen)
                 }
             ) {
                 Text("List")
