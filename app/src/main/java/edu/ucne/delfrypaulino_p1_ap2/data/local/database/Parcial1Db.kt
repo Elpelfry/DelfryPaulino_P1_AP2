@@ -2,18 +2,18 @@ package edu.ucne.delfrypaulino_p1_ap2.data.local.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import edu.ucne.delfrypaulino_p1_ap2.data.local.dao.AlgoDao
-import edu.ucne.delfrypaulino_p1_ap2.data.local.entities.AlgoEntity
+import edu.ucne.delfrypaulino_p1_ap2.data.local.dao.VentaDao
+import edu.ucne.delfrypaulino_p1_ap2.data.local.entities.VentaEntity
 
 @Database(
 
     entities = [
-        AlgoEntity::class
+        VentaEntity::class
     ],
-    version = 1,
+    version = 3,
     exportSchema = false
 )
 
 abstract class Parcial1Db : RoomDatabase(){
-    abstract fun algoDao(): AlgoDao
+    abstract fun ventaDao(): VentaDao
 }
