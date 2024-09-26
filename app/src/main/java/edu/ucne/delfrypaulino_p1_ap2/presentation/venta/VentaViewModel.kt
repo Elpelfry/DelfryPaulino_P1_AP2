@@ -150,9 +150,7 @@ class VentaViewModel @Inject constructor(
                 clienteError = "",
                 galonesError = "",
                 descuentoGalonError = "",
-                precioError = "",
-                totalDescontadoError = "",
-                totalError = "",
+                precioError = ""
             )
         }
     }

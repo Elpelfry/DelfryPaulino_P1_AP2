@@ -188,7 +188,6 @@ fun VentaScreenBody(
                         label = { Text(text = "Total Descontado") },
                         value = uistate.totalDescontado.toString().replace("null", "0.0"),
                         onValueChange = {},
-                        isError = (uistate.precioError != ""),
                         modifier = Modifier.fillMaxWidth(),
                         readOnly = true
                     )
@@ -200,7 +199,6 @@ fun VentaScreenBody(
                         label = { Text(text = "Total") },
                         value = uistate.total.toString().replace("null", "0.0"),
                         onValueChange = {},
-                        isError = (uistate.totalError != ""),
                         modifier = Modifier.fillMaxWidth(),
                         readOnly = true
                     )

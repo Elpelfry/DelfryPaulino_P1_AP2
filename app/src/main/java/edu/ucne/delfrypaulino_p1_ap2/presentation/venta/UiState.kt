@@ -15,7 +15,5 @@ data class UiState(
     val clienteError: String = "",
     val galonesError: String = "",
     val descuentoGalonError: String = "",
-    val precioError: String = "",
-    val totalDescontadoError: String = "",
-    val totalError: String = "",
+    val precioError: String = ""
 )
