@@ -146,7 +146,13 @@ class VentaViewModel @Inject constructor(
                 precio = 0.0,
                 totalDescontado = 0.0,
                 total = 0.0,
-                ventaId = null
+                ventaId = null,
+                clienteError = "",
+                galonesError = "",
+                descuentoGalonError = "",
+                precioError = "",
+                totalDescontadoError = "",
+                totalError = "",
             )
         }
     }
