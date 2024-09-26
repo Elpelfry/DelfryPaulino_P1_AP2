@@ -49,10 +49,10 @@ fun VentaListScreen(
     onEdit: (Int) -> Unit,
     onAdd: () -> Unit
 ) {
-    val uistate by viewModel.uistate.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     VentaListBody(
-        uiState = uistate,
+        uiState = uiState,
         onEvent = viewModel::onEvent,
         onEdit = onEdit,
         onAdd = onAdd
@@ -63,7 +63,7 @@ fun VentaListScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VentaListBody(
-    uiState: Uistate,
+    uiState: UiState,
     onEvent: (VentaEvent) -> Unit,
     onEdit: (Int) -> Unit,
     onAdd: () -> Unit
@@ -204,7 +204,7 @@ fun VentaListPreview() {
 
 
     VentaListBody(
-        uiState = Uistate(ventas = list),
+        uiState = UiState(ventas = list),
         onEvent = {},
         onAdd = {},
         onEdit = {}
